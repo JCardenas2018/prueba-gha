@@ -1,3 +1,3 @@
 FROM openjdk:8
-COPY cs.jar cs.jar
-CMD ["java","-jar","cs.jar"]
+COPY hello.jar hello.jar
+CMD ["java","-jar","hello.jar"]
