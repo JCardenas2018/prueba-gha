@@ -6,11 +6,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Build y push de la imagen de docker a dockerhub
-      uses: HurricanKai/Publish-Docker-Github-Action@master
-      with:
-        name: ${{ secrets.REPOSITORY }}
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+    #- name: Build y push de la imagen de docker a dockerhub
+    #  uses: HurricanKai/Publish-Docker-Github-Action@master
+     # with:
+    #    name: ${{ secrets.REPOSITORY }}
+      #  username: ${{ secrets.DOCKER_USERNAME }}
+       # password: ${{ secrets.DOCKER_PASSWORD }}
     - name: Push to GCR Github Action
       uses: RafikFarhad/push-to-gcr-github-action@v3
+      with:
+          gcloud_service_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
+          registry: gcr.io
+          project_id: hivi-293916
+          image_name: tubazo-mano
