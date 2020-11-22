@@ -12,3 +12,5 @@ jobs:
         name: ${{ secrets.REPOSITORY }}
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+    - name: Push to GCR Github Action
+      uses: RafikFarhad/push-to-gcr-github-action@v3
