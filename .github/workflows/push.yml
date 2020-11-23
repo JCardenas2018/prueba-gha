@@ -14,7 +14,7 @@ jobs:
           registry: gcr.io
           project_id: hivi-293916
           image_name: tubazo-mano
-      - name: Build y push de la imagen de docker a dockerhub
+    #  - name: Build y push de la imagen de docker a dockerhub
     #  uses: HurricanKai/Publish-Docker-Github-Action@master
     # with:
     #    name: ${{ secrets.REPOSITORY }}
