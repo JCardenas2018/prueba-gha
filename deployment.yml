@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: demo
-        image: joselevano1/appbackend:v1
+        image: 76591745/spring
         ports:
         - containerPort: 8080
