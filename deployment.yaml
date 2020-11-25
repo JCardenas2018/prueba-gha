@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring
+  name: angular
   labels:
-    app: backend
+    app: frontend
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: backend
+      app: frontend
   template:
     metadata:
       labels:
-        app: backend
+        app: frontend
     spec:
       containers:
       - name: demo
-        image: 76591745/spring
+        image: marcosalarcon/appfrontend:v1
         ports:
-        - containerPort: 8080
+        - containerPort: 80
