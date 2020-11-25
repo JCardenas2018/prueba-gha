@@ -1,14 +1,14 @@
-on: push
-name: deploy
-jobs:
-  deploy:
-    name: deploy to cluster
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Build y push de la imagen de docker a dockerhub
-        uses: HurricanKai/Publish-Docker-Github-Action@master
-        with:
-          name: ${{ secrets.REPOSITORY }}
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+# on: push
+# name: deploy
+# jobs:
+#   deploy:
+#     name: deploy to cluster
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@master
+#       - name: Build y push de la imagen de docker a dockerhub
+#         uses: HurricanKai/Publish-Docker-Github-Action@master
+#         with:
+#           name: ${{ secrets.REPOSITORY }}
+#           username: ${{ secrets.DOCKER_USERNAME }}
+#           password: ${{ secrets.DOCKER_PASSWORD }}
